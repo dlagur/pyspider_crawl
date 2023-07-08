@@ -11,8 +11,8 @@ import logging
 logger = logging.getLogger("webui")
 
 from six import reraise
-from six.moves import builtins
-from six.moves.urllib.parse import urljoin
+from six import builtins
+from urllib.parse import urljoin
 from flask import Flask
 from pyspider.fetcher import tornado_fetcher
 

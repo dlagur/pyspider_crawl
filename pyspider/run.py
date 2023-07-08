@@ -53,9 +53,9 @@ def connect_rpc(ctx, param, value):
     if not value:
         return
     try:
-        from six.moves import xmlrpc_client
+        from six import xmlrpc_client
     except ImportError:
-        import xmlrpclib as xmlrpc_client
+        import xmlrpc as xmlrpc_client
     return xmlrpc_client.ServerProxy(value, allow_none=True)
 
 
